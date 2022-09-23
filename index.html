@@ -2,8 +2,16 @@
   <head>
     <title>OpenTelemetry In Practice</title>
     <link rel="stylesheet" href="styles.css" />
-    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Rajdhani' rel='stylesheet' type='text/css'>
+    <link
+      href="http://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="http://fonts.googleapis.com/css?family=Rajdhani"
+      rel="stylesheet"
+      type="text/css"
+    />
 
     <style>
       * {
@@ -16,13 +24,13 @@
         display: grid;
         grid-auto-flow: column;
         grid-template-columns: 50% 50%;
-        grid-template-rows: 90px 300px auto 200px 300px;
+        grid-template-rows: 90px 300px auto 20px 300px;
         grid-template-areas:
-           "logo links"
-           "title pretty-image"
-           "image-of-people about-us"
-           "call-to-action call-to-action"
-           "footer footer"
+          "logo links"
+          "title pretty-image"
+          "image-of-people about-us"
+          "call-to-action call-to-action"
+          "footer footer";
       }
       .logo {
         grid-area: logo;
@@ -60,69 +68,136 @@
         /* border: 3px purple solid; */
       }
       .full-image {
-          background-image: url(blog-Run_the_Otel_Collector-FI.png);
-          background-size: cover;
+        background-image: url(blog-Run_the_Otel_Collector-FI.png);
+        background-size: cover;
       }
       .about-us {
         grid-area: about-us;
       }
       .call-to-action {
         grid-area: call-to-action;
-        background: #53B8F4;
+        background: #53b8f4;
       }
       .footer {
         grid-area: footer;
+        background-color: #014388;
+        justify-self: stretch;
+        text-align: center;
+        color: #ffffff;
+        padding-top: 40px;
+        font-size: larger;
       }
+      .buttondown-credit {
+        font-size: x-small;
+      }
+      .email-input {
+        width: 80%;
+        margin: auto;
+        height: 40px;
+        text-align: right;
 
-      </style>
+        background: white;
+        border-radius: 30px;
+        color: black;
+        margin-top: 10px;
+      }
+      .subscribe-button {
+        width: auto;
+        padding-left: 10px;
+        height: 100%;
+
+        /* Blue_2 #366EDE */
+        background: #366ede;
+        /* Blue_2 #366EDE */
+        border: 2px solid #366ede;
+        border-radius: 30px;
+
+        /* Buttons/Buttons Standard */
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 14px;
+        /* identical to box height, or 100% */
+        align-items: center;
+        text-align: center;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+
+        /* White #FFFFFF */
+        color: #ffffff;
+      }
+      .email-input input {
+        width: auto;
+        border: none;
+      }
+      .copyright {
+        color: white;
+        font-size: small;
+      }
+    </style>
   </head>
   <body>
     <div class="grid-container">
-        <div class="logo">OpenTelemetry In Practice</div>
-        <div class="links">
-            <a href="/events">Events</a>
-            <a href="/blog">Blog</a>
-        </div>
-        <div class="title-of-page">
-            <h2>OpenTelemetry in Practice</h2>
-            <p>Improve the experience of implementing OpenTelemetry in production</p>
-        </div>
-        <div class="full-image">
-            <!-- <img src="blog-Run_the_Otel_Collector-FI.png" alt="Otel image" /> -->
-        </div>
-        <div class="second-image">
-            <img src="https://t4.ftcdn.net/jpg/02/84/18/21/360_F_284182168_EcObHbHpyLSOVjlF2N4L2Kok13NGK1IO.jpg" alt="Otel image" />
-        </div>
-        <div class="about-us">
-            <h2>About us</h2>
-            <h3>Welcome to the OpenTelemetry in Practice series</h3>
-            <p>Improve the experience of implementing OpenTelemetry in production</p>
-        </div>
-        <div class="call-to-action"> click here</div>
-        <div class="footer">subscribe here
-          <form
-  action="
+      <div class="logo">OpenTelemetry In Practice</div>
+      <div class="links">
+        <a href="/events">Events</a>
+        <a href="/blog">Blog</a>
+      </div>
+      <div class="title-of-page">
+        <h2>OpenTelemetry in Practice</h2>
+        <p>
+          Improve the experience of implementing OpenTelemetry in production
+        </p>
+      </div>
+      <div class="full-image">
+        <!-- <img src="blog-Run_the_Otel_Collector-FI.png" alt="Otel image" /> -->
+      </div>
+      <div class="second-image">
+        <img
+          src="https://t4.ftcdn.net/jpg/02/84/18/21/360_F_284182168_EcObHbHpyLSOVjlF2N4L2Kok13NGK1IO.jpg"
+          alt="Otel image"
+        />
+      </div>
+      <div class="about-us">
+        <h2>About us</h2>
+        <h3>Welcome to the OpenTelemetry in Practice series</h3>
+        <p>
+          Improve the experience of implementing OpenTelemetry in production
+        </p>
+      </div>
+      <div class="call-to-action">click here</div>
+      <div class="footer">
+        News to use when you use OpenTelemetry—get the monthly email!
+        <form
+          action="
     https://buttondown.email/api/emails/embed-subscribe/<your username>
   "
-  method="post"
-  target="popupwindow"
-  class="embeddable-buttondown-form"
->
-  <label for="email">Email</label>
-  <input
-    type="email"
-    name="email"
-    placeholder="you@gmail.com"
-  />
-  <input type="hidden" value="1" name="embed" />
-  <input type="submit" value="Subscribe" />
-  <p>
-    <a href="https://buttondown.email" target="_blank">
-        Powered by Buttondown.
-    </a>
-  </p>
-</form>
+          method="post"
+          target="popupwindow"
+          class="embeddable-buttondown-form"
+        >
+          <div class="email-input">
+            <label for="email">Email*</label>
+            <input type="email" name="email" placeholder="you@example.com" />
+            <input type="hidden" value="1" name="embed" />
+            <input class="subscribe-button" type="submit" value="Subscribe" />
+          </div>
+
+          <p>
+            <a
+              href="https://buttondown.email"
+              target="_blank"
+              class="buttondown-credit"
+            >
+              Powered by Buttondown.
+            </a>
+          </p>
+        </form>
+        <div class="copyright">
+          © 2022 Hound Technology, Inc. 
+          <a href="">Code of Conduct</a>
         </div>
+      </div>
     </div>
   </body>
 </html>
