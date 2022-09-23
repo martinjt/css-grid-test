@@ -43,7 +43,6 @@
         justify-self: right;
         padding-right: 40px;
         padding-top: 20px;
-
       }
 
       .links a {
@@ -54,14 +53,14 @@
         letter-spacing: 0.05em;
 
         text-align: center;
-        color: #00152D;
+        color: #00152d;
         text-transform: uppercase;
         text-decoration: none;
       }
       .title-of-page {
         padding: 10% 10% 20% 10%;
         background-color: #014388;
-        color: #FFFFFF;
+        color: #ffffff;
         grid-area: title;
       }
       .title-of-page h2 {
@@ -84,20 +83,20 @@
         background-size: cover;
       }
       .about-us {
-        color: #00152D;
+        color: #00152d;
         padding: 20% 10% 0 10%;
 
         grid-area: about-us;
       }
       .about-us h2 {
-        font-family: 'Rajdhani';
+        font-family: "Rajdhani";
         font-style: normal;
         font-weight: 700;
         font-size: 38px;
         line-height: 44px;
       }
       .about-us h3 {
-        font-family: 'Roboto';
+        font-family: "Roboto";
         font-style: normal;
         font-weight: 400;
         font-size: 26px;
@@ -106,13 +105,13 @@
 
       .call-to-action {
         grid-area: call-to-action;
-        background: #366EDE;
-        color: #FFFFFF;
+        background: #366ede;
+        color: #ffffff;
         text-align: center;
         padding-top: 30px;
       }
       .call-to-action h2 {
-        font-family: 'Rajdhani';
+        font-family: "Rajdhani";
         font-style: normal;
         font-weight: 700;
         font-size: 30px;
@@ -120,20 +119,20 @@
       }
       .call-to-action a:first-of-type {
         /* White #FFFFFF */
-        background: #FFFFFF;
+        background: #ffffff;
         /* White #FFFFFF */
-        border: 2px solid #FFFFFF;
-        color: #366EDE;
+        border: 2px solid #ffffff;
+        color: #366ede;
       }
       .call-to-action a:last-of-type {
         /* White #FFFFFF */
-        border: 2px solid #FFFFFF;
-        color: #FFFFFF;
+        border: 2px solid #ffffff;
+        color: #ffffff;
       }
       .call-to-action a {
         border-radius: 30px;
 
-        font-family: 'Roboto';
+        font-family: "Roboto";
         font-style: normal;
         font-weight: 300;
         font-size: 10px;
@@ -144,7 +143,7 @@
         letter-spacing: 0.1em;
         text-transform: uppercase;
         text-decoration: none;
-        padding: 5 10 5 10
+        padding: 5 10 5 10;
       }
       .footer {
         grid-area: footer;
@@ -170,7 +169,6 @@
         margin-top: 10px;
       }
       .subscribe-button {
-        width: auto;
         padding-left: 10px;
         height: 100%;
 
@@ -194,9 +192,32 @@
         /* White #FFFFFF */
         color: #ffffff;
       }
-      .email-input input {
-        width: auto;
+      .email-input-type-here {
         border: none;
+        width: 100%;
+        font-size: larger;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .fill-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .get-bigger-in-the-middle {
+        flex-grow: 2;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+      .stay-to-the-left {
+        padding-left: 10px;
+        justify-self: left;
+        text-align: left;
+        flex: 0;
+      }
+      .stay-to-the-right {
+        justify-self: right;
+        flex: 0;
+        margin-right: -5px;
       }
       .copyright {
         color: white;
@@ -206,48 +227,70 @@
   </head>
   <body>
     <div class="grid-container">
-        <div class="logo">
-            <img src="logo.svg" alt="OpenTelemetry In Practice" />
-        </div>
-        <div class="links">
-            <a href="/events">Events</a>
-            <a href="/blog">Blog</a>
-        </div>
-        <div class="title-of-page">
-            <h2>OpenTelemetry in Practice</h2>
-            <p>Improve the experience of implementing OpenTelemetry in production</p>
-        </div>
-        <div class="full-image">
-        </div>
-        <div class="second-image">
-            <img src="https://t4.ftcdn.net/jpg/02/84/18/21/360_F_284182168_EcObHbHpyLSOVjlF2N4L2Kok13NGK1IO.jpg" alt="Otel image" />
-        </div>
-        <div class="about-us">
-            <h2>About us</h2>
-            <h3>Welcome to the OpenTelemetry in Practice series</h3>
-            <p>This is a new experiment by some OpenTelemetry contributors in the End User Working Group. We’re aiming to address practical problems that commonly stop development teams from succeeding with OpenTelemetry. We’re also hoping to build stronger connections with developers focused on specific languages. Finally, we want to improve the experience of implementing OpenTelemetry in production. Each OpenTelemetry in Practice will include half an hour of lightning talks and a half hour of open conversation about the topic.</p>
-        </div>
-        <div class="call-to-action"> 
-            <h2>Interesting in shaping these conversations</h2>
-            <a href="">Contact Us</a>
-            <a href="">Join our Slack Group</a>
-        </div>
-        <div class="footer">
-            News to use when you use OpenTelemetry—get the monthly email!
-            <form
-              action="
-    https://buttondown.email/api/emails/embed-subscribe/<your username>
+      <div class="logo">
+        <img src="logo.svg" alt="OpenTelemetry In Practice" />
+      </div>
+      <div class="links">
+        <a href="/events">Events</a>
+        <a href="/blog">Blog</a>
+      </div>
+      <div class="title-of-page">
+        <h2>OpenTelemetry in Practice</h2>
+        <p>
+          Improve the experience of implementing OpenTelemetry in production
+        </p>
+      </div>
+      <div class="full-image"></div>
+      <div class="second-image">
+        <img
+          src="https://t4.ftcdn.net/jpg/02/84/18/21/360_F_284182168_EcObHbHpyLSOVjlF2N4L2Kok13NGK1IO.jpg"
+          alt="Otel image"
+        />
+      </div>
+      <div class="about-us">
+        <h2>About us</h2>
+        <h3>Welcome to the OpenTelemetry in Practice series</h3>
+        <p>
+          This is a new experiment by some OpenTelemetry contributors in the End
+          User Working Group. We’re aiming to address practical problems that
+          commonly stop development teams from succeeding with OpenTelemetry.
+          We’re also hoping to build stronger connections with developers
+          focused on specific languages. Finally, we want to improve the
+          experience of implementing OpenTelemetry in production. Each
+          OpenTelemetry in Practice will include half an hour of lightning talks
+          and a half hour of open conversation about the topic.
+        </p>
+      </div>
+      <div class="call-to-action">
+        <h2>Interesting in shaping these conversations</h2>
+        <a href="">Contact Us</a>
+        <a href="">Join our Slack Group</a>
+      </div>
+      <div class="footer">
+        News to use when you use OpenTelemetry—get the monthly email!
+        <form
+          action="
+    https://buttondown.email/api/emails/embed-subscribe/opentelemetryinpractice
   "
           method="post"
           target="popupwindow"
           class="embeddable-buttondown-form"
         >
-          <div class="email-input">
-            <label for="email">Email*</label>
-            <input type="email" name="email" placeholder="you@example.com" />
-            <input type="hidden" value="1" name="embed" />
-            <input class="subscribe-button" type="submit" value="Subscribe" />
+          <div class="email-input fill-container">
+            <label class="stay-to-the-left" for="email">Email*</label>
+            <input
+              class="get-bigger-in-the-middle email-input-type-here"
+              type="email"
+              name="email"
+              placeholder="you@example.com"
+            />
+            <input
+              class="subscribe-button stay-to-the-right"
+              type="submit"
+              value="Subscribe"
+            />
           </div>
+          <input type="hidden" value="1" name="embed" />
 
           <p>
             <a
