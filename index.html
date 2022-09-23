@@ -15,7 +15,7 @@
 
     <style>
       * {
-        font-family: Roboto;
+        font-family: Rajdhani;
       }
       /* div {
         border: 1px orange solid
@@ -24,7 +24,7 @@
         display: grid;
         grid-auto-flow: column;
         grid-template-columns: 50% 50%;
-        grid-template-rows: 90px 300px auto 20px 300px;
+        grid-template-rows: 90px 300px auto 200px 300px;
         grid-template-areas:
           "logo links"
           "title pretty-image"
@@ -39,6 +39,14 @@
         padding-top: 20px;
       }
       .links {
+        grid-area: links;
+        justify-self: right;
+        padding-right: 40px;
+        padding-top: 20px;
+
+      }
+
+      .links a {
         font-family: Rajdhani;
         font-size: 16px;
         font-weight: 700;
@@ -46,21 +54,25 @@
         letter-spacing: 0.05em;
 
         text-align: center;
-        grid-area: links;
-        justify-self: right;
-        padding-right: 40px;
-        padding-top: 20px;
+        color: #00152D;
+        text-transform: uppercase;
+        text-decoration: none;
       }
       .title-of-page {
-        padding: 10% 10 10 10px;
+        padding: 10% 10% 20% 10%;
         background-color: #014388;
-        color: white;
+        color: #FFFFFF;
         grid-area: title;
+      }
+      .title-of-page h2 {
+        font-weight: 12000;
+        font-size: 30px;
       }
       .full-image {
         grid-area: pretty-image;
       }
       .second-image {
+        padding-top: 20%;
         grid-area: image-of-people;
       }
       .second-image img {
@@ -72,11 +84,67 @@
         background-size: cover;
       }
       .about-us {
+        color: #00152D;
+        padding: 20% 10% 0 10%;
+
         grid-area: about-us;
       }
+      .about-us h2 {
+        font-family: 'Rajdhani';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 38px;
+        line-height: 44px;
+      }
+      .about-us h3 {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 26px;
+        line-height: 36px;
+      }
+
       .call-to-action {
         grid-area: call-to-action;
-        background: #53b8f4;
+        background: #366EDE;
+        color: #FFFFFF;
+        text-align: center;
+        padding-top: 30px;
+      }
+      .call-to-action h2 {
+        font-family: 'Rajdhani';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 20px;
+      }
+      .call-to-action a:first-of-type {
+        /* White #FFFFFF */
+        background: #FFFFFF;
+        /* White #FFFFFF */
+        border: 2px solid #FFFFFF;
+        color: #366EDE;
+      }
+      .call-to-action a:last-of-type {
+        /* White #FFFFFF */
+        border: 2px solid #FFFFFF;
+        color: #FFFFFF;
+      }
+      .call-to-action a {
+        border-radius: 30px;
+
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 10px;
+        line-height: 14px;
+        /* identical to box height, or 100% */
+        align-items: center;
+        text-align: center;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 5 10 5 10
       }
       .footer {
         grid-area: footer;
@@ -138,38 +206,36 @@
   </head>
   <body>
     <div class="grid-container">
-      <div class="logo">OpenTelemetry In Practice</div>
-      <div class="links">
-        <a href="/events">Events</a>
-        <a href="/blog">Blog</a>
-      </div>
-      <div class="title-of-page">
-        <h2>OpenTelemetry in Practice</h2>
-        <p>
-          Improve the experience of implementing OpenTelemetry in production
-        </p>
-      </div>
-      <div class="full-image">
-        <!-- <img src="blog-Run_the_Otel_Collector-FI.png" alt="Otel image" /> -->
-      </div>
-      <div class="second-image">
-        <img
-          src="https://t4.ftcdn.net/jpg/02/84/18/21/360_F_284182168_EcObHbHpyLSOVjlF2N4L2Kok13NGK1IO.jpg"
-          alt="Otel image"
-        />
-      </div>
-      <div class="about-us">
-        <h2>About us</h2>
-        <h3>Welcome to the OpenTelemetry in Practice series</h3>
-        <p>
-          Improve the experience of implementing OpenTelemetry in production
-        </p>
-      </div>
-      <div class="call-to-action">click here</div>
-      <div class="footer">
-        News to use when you use OpenTelemetry—get the monthly email!
-        <form
-          action="
+        <div class="logo">
+            <img src="logo.svg" alt="OpenTelemetry In Practice" />
+        </div>
+        <div class="links">
+            <a href="/events">Events</a>
+            <a href="/blog">Blog</a>
+        </div>
+        <div class="title-of-page">
+            <h2>OpenTelemetry in Practice</h2>
+            <p>Improve the experience of implementing OpenTelemetry in production</p>
+        </div>
+        <div class="full-image">
+        </div>
+        <div class="second-image">
+            <img src="https://t4.ftcdn.net/jpg/02/84/18/21/360_F_284182168_EcObHbHpyLSOVjlF2N4L2Kok13NGK1IO.jpg" alt="Otel image" />
+        </div>
+        <div class="about-us">
+            <h2>About us</h2>
+            <h3>Welcome to the OpenTelemetry in Practice series</h3>
+            <p>This is a new experiment by some OpenTelemetry contributors in the End User Working Group. We’re aiming to address practical problems that commonly stop development teams from succeeding with OpenTelemetry. We’re also hoping to build stronger connections with developers focused on specific languages. Finally, we want to improve the experience of implementing OpenTelemetry in production. Each OpenTelemetry in Practice will include half an hour of lightning talks and a half hour of open conversation about the topic.</p>
+        </div>
+        <div class="call-to-action"> 
+            <h2>Interesting in shaping these conversations</h2>
+            <a href="">Contact Us</a>
+            <a href="">Join our Slack Group</a>
+        </div>
+        <div class="footer">
+            News to use when you use OpenTelemetry—get the monthly email!
+            <form
+              action="
     https://buttondown.email/api/emails/embed-subscribe/<your username>
   "
           method="post"
