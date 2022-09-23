@@ -64,9 +64,21 @@
         color: #FFFFFF;
         grid-area: title;
       }
+      .title-of-page h2 a {
+        text-decoration: none;
+        color: #FFFFFF;
+      }
+      .title-of-page a {
+        text-decoration: none;
+        color: #FFFFFF;
+      }
       .title-of-page h2 {
+        font-family: Rajdhani;
         font-weight: 12000;
         font-size: 30px;
+      }
+      .title-of-page p {
+        font-family: Roboto;
       }
       .full-image {
         grid-area: pretty-image;
@@ -85,7 +97,7 @@
       }
       .about-us {
         color: #00152D;
-        padding: 20% 10% 0 10%;
+        padding: 20 10% 20 10%;
 
         grid-area: about-us;
       }
@@ -133,12 +145,10 @@
       .call-to-action a {
         border-radius: 30px;
 
-        font-family: 'Roboto';
         font-style: normal;
-        font-weight: 300;
-        font-size: 10px;
+        font-weight: 700;
+        font-size: 14px;
         line-height: 14px;
-        /* identical to box height, or 100% */
         align-items: center;
         text-align: center;
         letter-spacing: 0.1em;
@@ -207,15 +217,18 @@
   <body>
     <div class="grid-container">
         <div class="logo">
-            <img src="logo.svg" alt="OpenTelemetry In Practice" />
+            <a href="https://opentelemetryinpractice.net">
+                <img src="logo.svg" alt="OpenTelemetry In Practice" />
+            </a>
         </div>
         <div class="links">
-            <a href="/events">Events</a>
-            <a href="/blog">Blog</a>
+            <a href="https://www.meetup.com/opentelemetry-in-practice-meetup-group/events/">Events</a>
+            <a href="https://buttondown.email/opentelemetryinpractice">Newsletters</a>
         </div>
         <div class="title-of-page">
-            <h2>OpenTelemetry in Practice</h2>
+            <h2><a href="https://opentelemetry.io">OpenTelemetry</a> in Practice</h2>
             <p>Improve the experience of implementing OpenTelemetry in production</p>
+            <a href="https://opentelemetry.io">https://opentelemetry.io</a>
         </div>
         <div class="full-image">
         </div>
